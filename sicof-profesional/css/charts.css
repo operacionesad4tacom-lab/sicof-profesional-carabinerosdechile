@@ -1,0 +1,67 @@
+/* charts.css */
+
+:root {
+  --chart-text: #1f2937;
+  --chart-muted: #6b7280;
+  --chart-grid: #e5e7eb;
+  --chart-bg: #ffffff;
+}
+
+/* Contenedor general */
+.chart-container {
+  background: var(--chart-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Título y descripción */
+.chart-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--chart-text);
+  margin-bottom: 0.25rem;
+}
+
+.chart-subtitle {
+  font-size: 0.875rem;
+  color: var(--chart-muted);
+  margin-bottom: 1rem;
+}
+
+/* SVG charts */
+.chart-container svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Ejes */
+.chart-axis path,
+.chart-axis line {
+  stroke: var(--chart-grid);
+}
+
+.chart-axis text {
+  fill: var(--chart-muted);
+  font-size: 12px;
+}
+
+/* Grid */
+.chart-grid line {
+  stroke: var(--chart-grid);
+  stroke-dasharray: 4;
+}
+
+/* Tooltips */
+.chart-tooltip {
+  position: absolute;
+  background: #111827;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 6px 8px;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 10;
+}
