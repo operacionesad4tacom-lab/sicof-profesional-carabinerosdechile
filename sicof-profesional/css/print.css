@@ -1,0 +1,70 @@
+/* print.css */
+
+@media print {
+  /* Reset básico */
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+  }
+
+  body {
+    font-family: 'Inter', serif;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  /* Ocultar elementos innecesarios */
+  nav,
+  footer,
+  .no-print,
+  button,
+  .btn {
+    display: none !important;
+  }
+
+  /* Encabezados */
+  h1 {
+    font-size: 20pt;
+    margin-bottom: 12pt;
+  }
+
+  h2 {
+    font-size: 16pt;
+    margin-bottom: 10pt;
+  }
+
+  h3 {
+    font-size: 14pt;
+    margin-bottom: 8pt;
+  }
+
+  /* Tablas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: 1px solid #000;
+    padding: 6pt;
+    text-align: left;
+  }
+
+  th {
+    font-weight: 600;
+  }
+
+  /* Evitar cortes feos */
+  img,
+  table,
+  blockquote {
+    page-break-inside: avoid;
+  }
+
+  /* Saltos de página manuales */
+  .page-break {
+    page-break-before: always;
+  }
+}
